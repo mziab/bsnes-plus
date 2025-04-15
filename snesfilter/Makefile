@@ -6,7 +6,7 @@ qtlibs := QtCore QtGui QtWidgets
 include $(nall)/qt/Makefile
 
 c     := $(compiler) -xc -std=gnu99
-cpp   := $(compiler) -std=gnu++0x
+cpp   := $(compiler) -std=c++17
 flags := -I. -I$(common) -Iobj $(qtinc)
 link  :=
 

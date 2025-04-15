@@ -440,14 +440,14 @@ void DisassemblerView::copyInstructions() {
       
       // Convert the nall::string opcode text into a QString.
       // (Assuming nall::string overloads operator const char*())
-      QString qLineText = QString::fromUtf8((const char *)line.text);
+      QString qLineText = QString::fromUtf8((const char *)line.text, -1);
       lineStr += qLineText;
       
       QString paramsStr;
       QString directComment;
       
       // Convert the nall::string parameter format into a QString similarly.
-      QString qParamFormat = QString::fromUtf8((const char *)line.paramFormat);
+      QString qParamFormat = QString::fromUtf8((const char *)line.paramFormat, -1);
       if (!qParamFormat.isEmpty()) {
         int left = 0;
         int textLength = qParamFormat.length();

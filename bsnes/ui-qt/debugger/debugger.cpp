@@ -455,7 +455,7 @@ void Debugger::synchronize() {
 
 void Debugger::echo(const char *message) {
   console->moveCursor(QTextCursor::End);
-  console->insertHtml(QString::fromUtf8(message));
+  console->insertHtml(QString::fromUtf8(message, -1));
 }
 
 void Debugger::hide() {

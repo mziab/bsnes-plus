@@ -327,7 +327,7 @@ BreakpointEditor::BreakpointEditor() {
   application.windowList.append(this);
 
   layout = new QVBoxLayout;
-  layout->setMargin(Style::WindowMargin);
+  layout->setContentsMargins(Style::WindowMargin, Style::WindowMargin, Style::WindowMargin, Style::WindowMargin);
   layout->setSpacing(Style::WidgetSpacing);
   setLayout(layout);
 
@@ -365,7 +365,7 @@ BreakpointEditor::BreakpointEditor() {
   header->setSectionResizeMode(QHeaderView::ResizeToContents);
   
   btnLayout = new QHBoxLayout;
-  btnLayout->setMargin(0);
+  btnLayout->setContentsMargins(0, 0, 0, 0);
   btnLayout->setSpacing(Style::WidgetSpacing);
   layout->addLayout(btnLayout);
   

@@ -3,7 +3,7 @@ BSXSettingsWindow *bsxSettingsWindow;
 
 BSXSettingsWindow::BSXSettingsWindow() {
   layout = new QVBoxLayout;
-  layout->setMargin(Style::WindowMargin);
+  layout->setContentsMargins(Style::WindowMargin, Style::WindowMargin, Style::WindowMargin, Style::WindowMargin);
   layout->setSpacing(0);
   layout->setAlignment(Qt::AlignTop);
   setLayout(layout);

@@ -162,7 +162,7 @@ public:
 
   bool init() {
     layout = new QVBoxLayout;
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     widget = new RubyGLWidget;
     widget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);

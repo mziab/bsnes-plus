@@ -219,7 +219,7 @@ MainWindow::MainWindow() {
     canvasContainer->setObjectName("backdrop");
 
     canvasLayout = new QVBoxLayout; {
-      canvasLayout->setMargin(0);
+      canvasLayout->setContentsMargins(0, 0, 0, 0);
       canvasLayout->setAlignment(Qt::AlignCenter);
 
       canvas = new CanvasWidget;
@@ -241,7 +241,7 @@ MainWindow::MainWindow() {
 
   //layout
   layout = new QVBoxLayout;
-  layout->setMargin(0);
+  layout->setContentsMargins(0, 0, 0, 0);
   layout->setSpacing(0);
   #if !defined(PLATFORM_OSX)
   layout->addWidget(menuBar);

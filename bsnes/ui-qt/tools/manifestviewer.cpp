@@ -4,7 +4,7 @@ ManifestViewerWindow *manifestViewerWindow;
 ManifestViewerWindow::ManifestViewerWindow() {
 	layout = new QVBoxLayout;
 	layout->setAlignment(Qt::AlignTop | Qt::AlignLeft);
-	layout->setMargin(Style::WindowMargin);
+	layout->setContentsMargins(Style::WindowMargin, Style::WindowMargin, Style::WindowMargin, Style::WindowMargin);
 	layout->setSpacing(Style::WidgetSpacing);
 	setLayout(layout);
 

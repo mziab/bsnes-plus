@@ -116,7 +116,7 @@ inline NewFolderDialog::NewFolderDialog(FileDialog *fileDialog) : parent(fileDia
 
   layout = new QVBoxLayout;
   layout->setAlignment(Qt::AlignTop);
-  layout->setMargin(5);
+  layout->setContentsMargins(5, 5, 5, 5);
   layout->setSpacing(5);
   setLayout(layout);
 
@@ -309,7 +309,7 @@ inline FileDialog::FileDialog() {
   resize(640, 360);
 
   layout = new QVBoxLayout;
-  layout->setMargin(5);
+  layout->setContentsMargins(5, 5, 5, 5);
   layout->setSpacing(5);
   setLayout(layout);
 

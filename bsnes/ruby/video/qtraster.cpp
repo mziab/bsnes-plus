@@ -87,7 +87,7 @@ public:
     term();
 
     layout = new QVBoxLayout;
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     context.image  = 0;
     context.width  = 0;

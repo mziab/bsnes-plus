@@ -7,7 +7,7 @@ SymbolsView::SymbolsView(DisasmProcessor *processor) : processor(processor) {
   application.windowList.append(this);
 
   layout = new QVBoxLayout;
-  layout->setMargin(Style::WindowMargin);
+  layout->setContentsMargins(Style::WindowMargin, Style::WindowMargin, Style::WindowMargin, Style::WindowMargin);
   layout->setSpacing(Style::WidgetSpacing);
   setLayout(layout);
 

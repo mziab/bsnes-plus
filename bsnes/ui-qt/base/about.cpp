@@ -19,7 +19,7 @@ AboutWindow::AboutWindow() {
 
   layout = new QVBoxLayout;
   layout->setSizeConstraint(QLayout::SetFixedSize);
-  layout->setMargin(Style::WindowMargin);
+  layout->setContentsMargins(Style::WindowMargin, Style::WindowMargin, Style::WindowMargin, Style::WindowMargin);
   layout->setSpacing(Style::WidgetSpacing);
   setLayout(layout);
 

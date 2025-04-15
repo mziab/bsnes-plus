@@ -7,7 +7,7 @@ CheatEditorWindow::CheatEditorWindow() {
   document = 0;
 
   layout = new QVBoxLayout;
-  layout->setMargin(Style::WindowMargin);
+  layout->setContentsMargins(Style::WindowMargin, Style::WindowMargin, Style::WindowMargin, Style::WindowMargin);
   layout->setSpacing(Style::WidgetSpacing);
   setLayout(layout);
 
@@ -412,7 +412,7 @@ CheatImportWindow::CheatImportWindow() {
   application.windowList.append(this);
 
   layout = new QVBoxLayout;
-  layout->setMargin(Style::WindowMargin);
+  layout->setContentsMargins(Style::WindowMargin, Style::WindowMargin, Style::WindowMargin, Style::WindowMargin);
   layout->setSpacing(Style::WidgetSpacing);
   setLayout(layout);
 

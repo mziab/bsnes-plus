@@ -6,7 +6,7 @@ PathSettingWidget::PathSettingWidget(string &pathValue_, const char *labelText, 
   pathDefaultValue = pathDefaultValue_;
 
   layout = new QVBoxLayout;
-  layout->setMargin(0);
+  layout->setContentsMargins(0, 0, 0, 0);
   layout->setSpacing(0);
   setLayout(layout);
 
@@ -59,7 +59,7 @@ void PathSettingWidget::selectPath() {
 
 PathSettingsWindow::PathSettingsWindow() {
   layout = new QVBoxLayout;
-  layout->setMargin(Style::WindowMargin);
+  layout->setContentsMargins(Style::WindowMargin, Style::WindowMargin, Style::WindowMargin, Style::WindowMargin);
   layout->setSpacing(Style::WidgetSpacing);
   layout->setAlignment(Qt::AlignTop);
   setLayout(layout);

@@ -39,7 +39,7 @@ OamViewer::OamViewer() {
 
   layout = new QHBoxLayout;
   layout->setAlignment(Qt::AlignLeft);
-  layout->setMargin(Style::WindowMargin);
+  layout->setContentsMargins(Style::WindowMargin, Style::WindowMargin, Style::WindowMargin, Style::WindowMargin);
   layout->setSpacing(Style::WidgetSpacing);
   bottomWidget->setLayout(layout);
 

@@ -7,7 +7,7 @@ DebuggerView::DebuggerView(RegisterEdit *registers, DisasmProcessor *processor, 
   cursorPosition = 0;
 
   layout = new QHBoxLayout;
-  layout->setMargin(Style::WindowMargin);
+  layout->setContentsMargins(Style::WindowMargin, Style::WindowMargin, Style::WindowMargin, Style::WindowMargin);
   layout->setSpacing(Style::WidgetSpacing);
   setLayout(layout);
 

@@ -194,15 +194,15 @@ void MemoryEditor::showAddress(qint64 address) {
 void MemoryEditor::showContextMenu(const QPoint& pos) {
   QMenu menu;
   
-  menu.addAction("Cut", editor, SLOT(cut()), QKeySequence::Cut);
-  menu.addAction("Copy", editor, SLOT(copy()), QKeySequence::Copy);
-  menu.addAction("Paste", editor, SLOT(paste()), QKeySequence::Paste);
+  menu.addAction("Cut",  QKeySequence::Cut, editor, "cut");
+  menu.addAction("Copy", QKeySequence::Copy, editor, "copy");
+  menu.addAction("Paste", QKeySequence::Paste, editor, "paste");
   
   menu.addSeparator();
   
-  menu.addAction("Undo", editor, SLOT(undo()), QKeySequence::Undo)
+  menu.addAction("Undo", QKeySequence::Undo, editor, "undo")
     ->setEnabled(editor->canUndo());
-  menu.addAction("Redo", editor, SLOT(redo()), QKeySequence::Redo)
+  menu.addAction("Redo", QKeySequence::Redo, editor, "redo")
     ->setEnabled(editor->canRedo());
     
   if (memorySource != SNES::Debugger::MemorySource::CartROM

@@ -65,8 +65,8 @@ void BSXSettingsWindow::initializeUi() {
   }
   
   dateTime->setCalendarPopup(true);
-  dateTime->setTimeSpec(Qt::UTC);
-  dateTime->setDateTime(QDateTime::fromSecsSinceEpoch(SNES::config().sat.custom_time).toTimeSpec(Qt::UTC));
+  dateTime->setTimeZone(QTimeZone::UTC);
+  dateTime->setDateTime(QDateTime::fromSecsSinceEpoch(SNES::config().sat.custom_time).toTimeZone(QTimeZone::UTC));
   
   sizeCombo->setCurrentIndex(SNES::config().sat.default_size);
 }

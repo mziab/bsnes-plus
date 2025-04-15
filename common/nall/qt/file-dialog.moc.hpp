@@ -319,7 +319,7 @@ inline FileDialog::FileDialog() {
   pathBox = new QComboBox;
   pathBox->setEditable(true);
   pathBox->setMinimumContentsLength(16);
-  pathBox->setSizeAdjustPolicy(QComboBox::AdjustToMinimumContentsLength);
+  pathBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
   pathBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
   navigationLayout->addWidget(pathBox);
 
@@ -359,7 +359,7 @@ inline FileDialog::FileDialog() {
 
   filterBox = new QComboBox;
   filterBox->setMinimumContentsLength(16);
-  filterBox->setSizeAdjustPolicy(QComboBox::AdjustToMinimumContentsLength);
+  filterBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
   filterBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
   controlLayout->addWidget(filterBox);
 

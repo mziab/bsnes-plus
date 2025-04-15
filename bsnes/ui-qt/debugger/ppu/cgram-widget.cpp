@@ -86,8 +86,8 @@ void CgramWidget::paintEvent(QPaintEvent*) {
 }
 
 void CgramWidget::mousePressEvent(QMouseEvent *event) {
-  int x = event->x() / scale;
-  int y = event->y() / scale;
+  int x = event->position().x() / scale;
+  int y = event->position().y() / scale;
 
   if (x >= 0 && x < 16 && y >= 0 && y < 16) {
     setSelected(y * 16 + x);

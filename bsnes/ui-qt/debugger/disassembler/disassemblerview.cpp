@@ -305,7 +305,7 @@ void DisassemblerView::mousePressEvent(QMouseEvent * event) {
   bool left = event->button() & Qt::LeftButton;
 
   // Calculate the visible row from the mouse position.
-  int row = (event->y() - lineOffset + charHeight) / charHeight;
+  int row = (event->position().y() - lineOffset + charHeight) / charHeight;
   if (row >= 0 && row < (int)lines.size()) { 
     // Make sure this line isn’t empty before selecting.
     if (!lines[row].line.isEmpty()) {
@@ -557,7 +557,7 @@ void DisassemblerView::mouseMoveEvent(QMouseEvent *e) {
   switch (mouseState) {
   case STATE_RESIZING_COLUMN:
     {
-      int32_t newSize = mouseStateValue2 + (e->x() - mouseX);
+      int32_t newSize = mouseStateValue2 + (e->position().x() - mouseX);
       if (newSize < 10) {
         newSize= 10;
       }
@@ -569,8 +569,8 @@ void DisassemblerView::mouseMoveEvent(QMouseEvent *e) {
     break;
 
   default:
-    mouseX = e->x();
-    mouseY = e->y();
+    mouseX = e->position().x();
+    mouseY = e->position().y();
     updateCurrentMousePosition();
   }
 }

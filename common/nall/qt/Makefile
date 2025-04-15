@@ -12,7 +12,7 @@
 # $(qtplatformdlls) -- dlls to copied to "output/platforms" on windows
 
 ifeq ($(platform),$(filter $(platform),x msys))
-  qtlibs := $(subst Qt,Qt5,$(qtlibs))
+  qtlibs := $(subst Qt,Qt6,$(qtlibs))
 
   qtinc := `pkg-config --cflags $(qtlibs)`
   qtlib := `pkg-config --libs $(qtlibs)`
@@ -51,14 +51,14 @@ else ifeq ($(platform),win)
   qtlib := -L$(qtpath)/lib
   qtlib += -L$(qtpath)/plugins/imageformats
 
-  qtlib += $(subst -lQt,-lQt5,$(foreach lib,$(qtlibs),-l$(lib)))
+  qtlib += $(subst -lQt,-lQt6,$(foreach lib,$(qtlibs),-l$(lib)))
   qtlib += -lmingw32 -lqtmain -lcomdlg32 -loleaut32 -limm32 -lwinmm
   qtlib += -lwinspool -lmsimg32 -lole32 -ladvapi32 -lws2_32 -luuid -lgdi32
 
   # optional image-file support:
   # qtlib += -lqjpeg -lqmng
 
-  qtdlls := $(qtlibs:Qt%=Qt5%.dll)
+  qtdlls := $(qtlibs:Qt%=Qt6%.dll)
   qtplatformdlls := plugins\platforms\qwindows.dll
 
 endif
@@ -67,7 +67,7 @@ ifeq ($(moc),)
   ifeq ($(qtpath),)
     moc := moc
   else
-    moc := $(qtpath)/bin/moc
+    moc := $(qtpath)/libexec/moc
   endif
 endif
 
@@ -75,6 +75,6 @@ ifeq ($(rcc),)
   ifeq ($(qtpath),)
     rcc := rcc
   else
-    rcc := $(qtpath)/bin/rcc
+    rcc := $(qtpath)/libexec/rcc
   endif
 endif

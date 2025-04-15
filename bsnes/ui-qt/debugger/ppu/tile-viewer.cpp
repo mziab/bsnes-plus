@@ -197,7 +197,7 @@ TileViewer::TileViewer() {
 
   connect(imageGridWidget, SIGNAL(selectedChanged()), this, SLOT(updateTileInfo()));
 
-  connect(vramBaseButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(onVramBaseButtonClicked(int)));
+  connect(vramBaseButtonGroup, SIGNAL(idClicked(int)), this, SLOT(onVramBaseButtonClicked(int)));
 }
 
 void TileViewer::autoUpdate() {

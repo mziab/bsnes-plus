@@ -19,7 +19,7 @@ objdir := obj/$(profile)
 
 # compiler
 c       := $(compiler) -xc -std=gnu99
-cpp     := $(compiler) -std=gnu++0x
+cpp     := $(compiler) -std=c++17
 flags   := -I. -I$(common) -I$(snes)
 link    :=
 objects :=

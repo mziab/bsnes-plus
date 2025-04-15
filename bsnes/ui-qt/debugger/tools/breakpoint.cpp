@@ -431,7 +431,7 @@ void BreakpointEditor::addBreakpoint(const string& addr, const string& mode, con
   if (model->insertRow(row)) {
     string sourceStr = source;
     sourceStr.lower();
-    int nSource = sources.indexOf(sourceStr);
+    int nSource = sources.indexOf(QString(sourceStr));
     if (nSource < 0) return;
     model->setData(model->index(row, BreakpointModel::BreakSource), nSource);
 
@@ -486,7 +486,7 @@ int32_t BreakpointEditor::indexOfBreakpointExec(uint32_t addr, const string &sou
     if((b.mode & (unsigned)SNES::Debugger::Breakpoint::Mode::Exec) 
        && addr >= b.addr 
        && addr <= (b.addr_end ? b.addr_end : b.addr)
-       && sources.indexOf(source) == (unsigned)b.source) {
+       && sources.indexOf(QString(source)) == (unsigned)b.source) {
       return n;
     }
   }

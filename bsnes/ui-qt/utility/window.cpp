@@ -51,8 +51,9 @@ void Utility::resizeMainWindow() {
 
   unsigned screenWidth, screenHeight;
   if(config().video.isFullscreen == false) {
-    screenWidth = QApplication::desktop()->availableGeometry(mainWindow).width();
-    screenHeight = QApplication::desktop()->availableGeometry(mainWindow).height();
+    auto screenGeometry = QApplication::primaryScreen()->geometry();
+    screenWidth = screenGeometry.width();
+    screenHeight = screenGeometry.height();
   } else {
     screenWidth = mainWindow->canvasContainer->size().width();
     screenHeight = mainWindow->canvasContainer->size().height();

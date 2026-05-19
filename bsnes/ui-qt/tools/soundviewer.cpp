@@ -1,7 +1,7 @@
 #include "soundviewer.moc"
 SoundViewerWindow *soundViewerWindow;
 
-#include <ctgmath>
+#include <cmath>
 
 #define OCTAVE_OFFSET 7
 #define NUM_OCTAVES 8

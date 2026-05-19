@@ -21,7 +21,7 @@ objdir := obj/$(profile)
 c       := $(compiler) -xc -std=gnu99
 cpp     := $(compiler) -std=c++17
 flags   := -I. -I$(common) -I$(snes)
-link    :=
+link    := -pie
 objects :=
 
 # build version
@@ -43,7 +43,7 @@ else
 endif
 
 # comment this line to enable asserts
-flags += -DNDEBUG
+flags += -DNDEBUG -fPIC
 
 # profile-guided instrumentation
 # flags += -fprofile-generate

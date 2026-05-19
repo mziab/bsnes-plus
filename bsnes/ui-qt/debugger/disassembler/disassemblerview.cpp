@@ -489,7 +489,7 @@ void DisassemblerView::copyInstructions() {
                   Symbol sym = processor->getSymbols() ? processor->getSymbols()->getSymbol(param.address) : Symbol::createInvalid();
                   if (sym.type != Symbol::INVALID) {
                     // Print the symbol name in angle brackets.
-                    paramText = QString("<%1>").arg(sym.name);
+                    paramText = "<" + QString(sym.name) + ">";
                   }
                   else {
                     if (argType == 'X') {
@@ -783,7 +783,7 @@ void DisassemblerView::paintOpcode(QPainter &painter, RenderableDisassemblerLine
                 Symbol sym = symbols->getSymbol(param.address);
 
                 if (sym.type != Symbol::INVALID) {
-                  QString text = QString("<%1>").arg(sym.name);
+                  QString text = "<" + QString(sym.name) + ">";
                   painter.setPen(paramSymbolColor);
                   painter.drawText(x, y, text);
                   x += text.length() * charWidth;
